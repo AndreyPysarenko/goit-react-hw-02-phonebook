@@ -34,7 +34,7 @@ export class App extends Component {
 
   changeFilter = event => {
     this.setState({
-      filter: event.currentTarget.value,
+      filter: event.target.value,
     });
   };
 
@@ -57,7 +57,7 @@ export class App extends Component {
         <ContactForm onSubmit={this.createNewContact} />
 
         <h2>Contacts</h2>
-        <Filter value={filter} changeFilter={this.changeFilter} />
+        <Filter value={filter} onChange={this.changeFilter} />
         <ContactList
           contacts={filterContacts}
           handleDelete={this.handleDelete}
